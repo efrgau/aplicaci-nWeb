@@ -3,7 +3,7 @@ import { db } from "@/db";
 import { standards0312, companies } from "@/db/schema";
 import { eq, and } from "drizzle-orm";
 import { initialStandards } from "@/db/seed";
-
+export const dynamic = 'force-dynamic';
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const companyId = searchParams.get("companyId") || "c1";
