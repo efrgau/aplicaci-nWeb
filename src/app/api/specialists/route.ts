@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { db } from "@/db";
 import { specialists } from "@/db/schema";
 import { initialSpecialists } from "@/db/seed";
-
+export const dynamic = 'force-dynamic';
 export async function GET() {
   try {
     let list = await db.select().from(specialists);
